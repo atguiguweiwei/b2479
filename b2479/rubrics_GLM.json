@@ -1,0 +1,227 @@
+[
+  {
+    "rubric_id": "R01",
+    "rubric_content": "item_prices.py必须使用Python和requests库实现物品价格获取功能",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确使用requests库调用OSRS官方API获取物品价格数据，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了requests库和正确的API端点，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R02",
+    "rubric_content": "item_trends_graphs.py必须使用Plotly生成物品价格趋势图",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确要求使用Plotly库生成可视化图表，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了plotly.graph_objects和plotly.subplots，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R03",
+    "rubric_content": "物品价格数据必须保存到backend/item_prices/目录下的JSON文件中",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确要求将物品价格数据以JSON格式保存到backend/item_prices/目录，这是核心显性要求，通过代码自动化/模型验证可判断是否将数据保存到了指定目录，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R04",
+    "rubric_content": "物品价格趋势图必须保存到backend/item_trends/目录下的PNG文件中",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确要求将物品价格趋势图以PNG格式保存到backend/item_trends/目录，这是核心显性要求，通过代码自动化/模型验证可判断是否将趋势图保存到了指定目录，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R05",
+    "rubric_content": "代码必须遵循player_info.py的结构和风格，包括函数命名和代码组织方式",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "代码库要求新模块遵循player_info.py的代码风格和结构模式，这是隐性要求，通过人工验证可判断代码结构和风格是否与player_info.py一致，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R06",
+    "rubric_content": "代码必须包含try-except错误处理和requests.exceptions.RequestException异常捕获",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了完整的错误处理机制，这是隐性要求，通过代码自动化/模型验证可判断是否包含try-except块和requests.exceptions.RequestException异常处理，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R07",
+    "rubric_content": "代码必须使用typing模块进行类型提示，包括Dict、Any、Optional等类型",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了typing模块的类型提示（如Dict[str, Any]、Optional），这是隐性要求，通过代码自动化/模型验证可判断是否使用了类型提示，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R08",
+    "rubric_content": "代码必须为所有函数包含docstring注释，说明函数的功能和参数",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中为所有函数都包含了docstring注释，这是隐性要求，通过代码自动化/模型验证可判断是否包含函数注释，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R09",
+    "rubric_content": "代码必须支持批量获取多个物品的价格信息，通过列表参数接收多个item_id",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py支持批量获取多个玩家的信息，这是隐性要求，通过代码自动化/模型验证可判断是否支持批量获取多个物品的价格信息，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R10",
+    "rubric_content": "代码必须支持生成多个物品的价格趋势图，通过列表参数接收多个item_id",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py支持批量获取多个玩家的信息，这是隐性要求，通过代码自动化/模型验证可判断是否支持生成多个物品的价格趋势图，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R11",
+    "rubric_content": "代码必须处理API请求超时情况，设置timeout参数为10秒",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中处理了API请求超时（timeout=10），这是隐性要求，通过代码自动化/模型验证可判断是否处理了API请求超时，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R12",
+    "rubric_content": "代码必须使用os.makedirs创建所需的目录结构，并设置exist_ok=True参数",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "代码库要求将数据保存到指定目录，因此必须创建所需的目录结构，这是隐性要求，通过代码自动化/模型验证可判断是否创建了所需的目录结构，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R13",
+    "rubric_content": "代码必须使用sys.argv解析命令行参数，支持函数名和参数列表",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py使用sys.argv解析命令行参数，这是隐性要求，通过代码自动化/模型验证可判断是否使用了命令行参数解析，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R14",
+    "rubric_content": "代码必须包含if __name__ == '__main__':入口点和main函数调用",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了if __name__ == '__main__':入口点，这是隐性要求，通过代码自动化/模型验证可判断是否包含标准入口点，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R15",
+    "rubric_content": "代码必须包含print语句输出处理进度和结果信息",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了适当的print语句输出处理进度，这是隐性要求，通过代码自动化/模型验证可判断是否包含适当的日志输出，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R16",
+    "rubric_content": "代码必须使用requests库发送HTTP GET请求并调用raise_for_status()检查响应状态",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了requests.get()和raise_for_status()，这是隐性要求，通过代码自动化/模型验证可判断是否使用了requests库和状态检查，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R17",
+    "rubric_content": "代码必须使用json.dump()方法将数据保存到JSON文件，并设置indent=4参数",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了json.dump()保存数据并设置indent=4，这是隐性要求，通过代码自动化/模型验证可判断是否使用了json库和格式化参数，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R18",
+    "rubric_content": "代码必须使用os库处理文件和目录操作，包括路径拼接和目录创建",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了os库处理文件和目录操作，这是隐性要求，通过代码自动化/模型验证可判断是否使用了os库处理文件和目录操作，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R19",
+    "rubric_content": "item_prices.py必须使用OSRS官方API端点https://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确使用OSRS官方API获取物品详情，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了正确的API端点，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R20",
+    "rubric_content": "item_trends_graphs.py必须使用OSRS官方API端点https://services.runescape.com/m=itemdb_oldschool/api/graph/{item_id}.json",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确使用OSRS官方API获取物品价格历史数据，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了正确的API端点，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R21",
+    "rubric_content": "代码必须对物品名称进行安全化处理，替换空格、斜杠和反斜杠为下划线",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "代码库中对物品名称进行了安全化处理以避免文件名问题，这是隐性要求，通过代码自动化/模型验证可判断是否对文件名进行了安全化处理，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R22",
+    "rubric_content": "item_trends_graphs.py必须使用plotly的make_subplots和write_image方法创建和保存图表",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "代码库明确使用plotly的make_subplots和write_image方法，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了正确的plotly方法，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R23",
+    "rubric_content": "代码必须包含参数验证，检查命令行参数数量是否满足要求",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了参数数量检查，这是隐性要求，通过代码自动化/模型验证可判断是否包含参数验证，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R24",
+    "rubric_content": "代码必须使用globals()[sys.argv[1]]()动态调用指定函数",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了globals()动态调用函数，这是隐性要求，通过代码自动化/模型验证可判断是否使用了动态函数调用，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R25",
+    "rubric_content": "代码必须将item_id参数转换为整数类型",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "代码库中将命令行参数转换为整数类型，这是隐性要求，通过代码自动化/模型验证可判断是否进行了类型转换，是隐含的要求。"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "rubric_id": "R01",
+    "rubric_content": "应用必须使用Python Flask框架构建Web服务，监听端口8080",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确使用Flask框架构建Web服务，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了Flask并正确配置了端口8080，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R02",
+    "rubric_content": "player_info.py必须能够通过OSRS API获取玩家技能统计数据",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目核心功能是通过OSRS API获取玩家数据，这是核心显性要求，通过代码自动化/模型验证可判断是否调用了正确的API端点，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R03",
+    "rubric_content": "item_prices.py必须使用requests库调用OSRS官方物品价格API",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确要求使用requests库获取物品价格数据，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了requests库和正确的API端点，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R04",
+    "rubric_content": "item_trends_graphs.py必须使用Plotly库生成物品价格趋势图",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确要求使用Plotly库生成可视化图表，这是核心显性要求，通过代码自动化/模型验证可判断是否使用了plotly.graph_objects和plotly.subplots，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R05",
+    "rubric_content": "应用必须支持英语界面",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确要求支持英语界面，这是核心显性要求，通过代码自动化/模型验证可判断是否配置了英语界面支持，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R06",
+    "rubric_content": "物品价格数据必须保存到backend/item_prices/目录下的JSON文件中",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确要求将物品价格数据以JSON格式保存到指定目录，这是核心显性要求，通过代码自动化/模型验证可判断是否将数据保存到了正确目录，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R07",
+    "rubric_content": "物品价格趋势图必须保存到backend/item_trends/目录下的PNG文件中",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确要求将物品价格趋势图以PNG格式保存到指定目录，这是核心显性要求，通过代码自动化/模型验证可判断是否将趋势图保存到了正确目录，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R08",
+    "rubric_content": "stats.html模板必须正确显示玩家技能统计数据，包括技能图标和等级信息",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目核心功能是显示玩家技能统计，这是显性要求，通过动态测试可验证模板是否正确渲染了技能数据，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R09",
+    "rubric_content": "应用必须使用Bootstrap框架实现响应式界面设计",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确使用Bootstrap框架，这是显性要求，通过代码自动化/模型验证可判断是否使用了Bootstrap CSS类，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R10",
+    "rubric_content": "代码必须包含适当的错误处理和异常捕获机制",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "良好的错误处理是代码质量的隐性要求，通过代码自动化/模型验证可判断是否包含try-except块和requests.exceptions.RequestException处理，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R11",
+    "rubric_content": "Docker容器化部署配置必须正确，能够通过docker run命令启动应用",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确使用Docker进行容器化部署，这是显性要求，通过动态测试可验证Docker配置是否正确，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R12",
+    "rubric_content": "Makefile必须包含run、clean等标准构建命令",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确使用Makefile进行构建管理，这是显性要求，通过代码自动化/模型验证可判断是否包含标准构建命令，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R13",
+    "rubric_content": "应用必须正确处理玩家技能数据的CSV格式解析",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "OSRS API返回CSV格式数据，正确解析是核心显性要求，通过代码自动化/模型验证可判断是否包含CSV解析逻辑，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R14",
+    "rubric_content": "代码必须遵循Python类型注解规范，使用typing模块",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "类型注解是Python代码质量的隐性要求，通过代码自动化/模型验证可判断是否使用了typing模块进行类型标注，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R15",
+    "rubric_content": "应用必须能够正确加载并显示src/img_site.json中的技能图标",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "动态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确要求显示技能图标，这是显性要求，通过动态测试可验证是否正确加载了图标数据，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R16",
+    "rubric_content": "代码必须包含适当的日志记录和调试信息输出",
+    "必要性": "Optional",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "适当的日志记录是代码可维护性的隐性要求，通过代码自动化/模型验证可判断是否包含print语句或日志记录，是隐含的优化要求。"
+  },
+  {
+    "rubric_id": "R17",
+    "rubric_content": "HTML模板必须正确使用Jinja2模板语法进行数据渲染",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "Flask使用Jinja2模板引擎，正确使用模板语法是显性要求，通过代码自动化/模型验证可判断模板语法是否正确，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R18",
+    "rubric_content": "应用必须正确处理HTTP请求超时和网络连接错误",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "网络请求的鲁棒性是隐性要求，通过代码自动化/模型验证可判断是否设置了合理的超时时间和错误处理，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R19",
+    "rubric_content": "CSS样式必须正确应用Pixelify Sans字体和项目指定的配色方案",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "项目明确使用特定字体和配色方案，这是显性要求，通过代码自动化/模型验证可判断样式是否正确应用，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R20",
+    "rubric_content": "requirements.txt必须包含项目所需的所有Python依赖包",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "依赖管理是项目部署的显性要求，通过代码自动化/模型验证可判断requirements.txt是否完整，是明确的显式要求。"
+  }
+]

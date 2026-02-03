@@ -1,0 +1,164 @@
+[
+  {
+    "rubric_id": "R01",
+    "rubric_content": "item_prices.py必须使用Python和OSRS API实现物品价格获取功能",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "题目明确要求使用OSRS API获取物品价格，这是核心显性要求，是任务的核心功能，通过代码自动化/模型验证可判断是否使用了指定API，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R02",
+    "rubric_content": "item_trends_graphs.py必须使用Plotly生成物品价格趋势图",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "题目明确要求使用Plotly生成物品价格趋势图，这是核心显性要求，是任务的核心功能，通过代码自动化/模型验证可判断是否使用了Plotly库，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R03",
+    "rubric_content": "物品价格数据必须保存到backend/item_prices/目录下的JSON文件中",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "题目明确要求将物品价格的JSON文件保存到单独的文件夹中，这是核心显性要求，通过代码自动化/模型验证可判断是否将数据保存到了指定目录，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R04",
+    "rubric_content": "物品价格趋势图必须保存到backend/item_trends/目录下的PNG文件中",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Explicit",
+    "rationale": "题目明确要求将物品价格趋势图保存到包含所有物品趋势图的文件夹中，这是核心显性要求，通过代码自动化/模型验证可判断是否将趋势图保存到了指定目录，是明确的显式要求。"
+  },
+  {
+    "rubric_id": "R05",
+    "rubric_content": "代码必须遵循player_info.py的结构和风格",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-人工验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "题目要求类似player_info.py的实现方式，这是隐性要求，通过人工验证可判断代码结构和风格是否与player_info.py一致，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R06",
+    "rubric_content": "代码必须包含错误处理和日志记录",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了错误处理和日志记录，这是隐性要求，通过代码自动化/模型验证可判断是否包含错误处理和日志记录，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R07",
+    "rubric_content": "代码必须使用类型提示",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了类型提示，这是隐性要求，通过代码自动化/模型验证可判断是否使用了类型提示，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R08",
+    "rubric_content": "代码必须包含函数注释",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了函数注释，这是隐性要求，通过代码自动化/模型验证可判断是否包含函数注释，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R09",
+    "rubric_content": "代码必须支持批量获取多个物品的价格信息",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py支持批量获取多个玩家的信息，这是隐性要求，通过代码自动化/模型验证可判断是否支持批量获取多个物品的价格信息，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R10",
+    "rubric_content": "代码必须支持生成多个物品的价格趋势图",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py支持批量获取多个玩家的信息，这是隐性要求，通过代码自动化/模型验证可判断是否支持生成多个物品的价格趋势图，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R11",
+    "rubric_content": "代码必须处理API请求超时和异常情况",
+    "必要性": "Important",
+    "评估维度": "鲁棒性（robustness）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中处理了API请求超时和异常情况，这是隐性要求，通过代码自动化/模型验证可判断是否处理了API请求超时和异常情况，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R12",
+    "rubric_content": "代码必须创建所需的目录结构",
+    "必要性": "Essential",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "题目要求将数据保存到指定目录，因此必须创建所需的目录结构，这是隐性要求，通过代码自动化/模型验证可判断是否创建了所需的目录结构，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R13",
+    "rubric_content": "代码必须使用命令行参数接受输入",
+    "必要性": "Important",
+    "评估维度": "功能要求（functional requirement）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py使用命令行参数接受输入，这是隐性要求，通过代码自动化/模型验证可判断是否使用了命令行参数接受输入，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R14",
+    "rubric_content": "代码必须包含main函数",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了main函数，这是隐性要求，通过代码自动化/模型验证可判断是否包含main函数，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R15",
+    "rubric_content": "代码必须包含适当的日志输出",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中包含了适当的日志输出，这是隐性要求，通过代码自动化/模型验证可判断是否包含适当的日志输出，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R16",
+    "rubric_content": "代码必须使用requests库发送API请求",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了requests库发送API请求，这是隐性要求，通过代码自动化/模型验证可判断是否使用了requests库发送API请求，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R17",
+    "rubric_content": "代码必须使用json库处理JSON数据",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了json库处理JSON数据，这是隐性要求，通过代码自动化/模型验证可判断是否使用了json库处理JSON数据，是隐含的要求。"
+  },
+  {
+    "rubric_id": "R18",
+    "rubric_content": "代码必须使用os库处理文件和目录操作",
+    "必要性": "Important",
+    "评估维度": "风格（style）",
+    "验证方式": "静态-模型验证",
+    "显性(Explicit)隐性（Implicit）": "Implicit",
+    "rationale": "player_info.py中使用了os库处理文件和目录操作，这是隐性要求，通过代码自动化/模型验证可判断是否使用了os库处理文件和目录操作，是隐含的要求。"
+  }
+]
